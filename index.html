@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hundir la flota</title>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+  <div id="titulo">Hundir la flota</div>
+  <div id="estado">Inicio del juego</div>
+  <div id='instrucciones'>Instrucciones</div>
+  <div id="tablero">
+    <div id="conjunto-botones">
+      <p>Elige el nivel de dificultad</p>
+      <button onclick="elegirDificultad(0)">Fácil</button>
+      <button onclick="elegirDificultad(1)">Medio</button>
+      <button onclick="elegirDificultad(2)">Difícil</button>
+    </div>
+  </div>
+</body>
+<script src="/js/functions.js"></script>
+<script src="/js/niveles/dificil.js"></script>
+<script src="/js/niveles/medio.js"></script>
+<script src="/js/niveles/facil.js"></script>
+<script src="/js/index.js"></script>
+</html>

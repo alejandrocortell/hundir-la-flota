@@ -1,0 +1,77 @@
+@font-face {
+  font-family: Big Shoulders Black;
+  src: url(../assets/font/BigShouldersStencilDisplay-Black.ttf);
+}
+
+@font-face {
+  font-family: Big Shoulders Bold;
+  src: url(../assets/font/BigShouldersStencilDisplay-Bold.ttf);
+}
+
+@font-face {
+  font-family: Big Shoulders Medium;
+  src: url(../assets/font/BigShouldersStencilDisplay-Medium.ttf);
+}
+
+@font-face {
+  font-family: Big Shoulders Regular;
+  src: url(../assets/font/BigShouldersStencilDisplay-Regular.ttf);
+}
+
+body{
+  display: grid;
+  grid-template-columns: auto 5fr;
+  grid-template-areas: 
+    "instrucciones  titulo"
+    "instrucciones  estado"
+    "instrucciones  tablero";
+}
+
+#titulo{
+  background-color: orange;
+
+  grid-area: titulo;
+  margin: auto;
+  margin-bottom: 25px;
+
+  font-family: 'Big Shoulders Black';
+  font-size: 55px;
+}
+
+#estado{
+  background-color: red;
+
+  grid-area: estado;
+
+  margin: auto;
+  margin-bottom: 10px;
+
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+}
+
+#instrucciones{
+  background-color: aqua;
+  grid-area: instrucciones;
+}
+
+#tablero{
+  background-color: blueviolet;
+  grid-area: tablero;
+
+  display: grid;
+  justify-items: center;
+}
+
+.ocultar-botones{
+  display: none;
+}
+
+.celda{
+  font-family: 'Big Shoulders Black';
+  font-size: 25px;
+
+  width: 35px;
+  height: 35px;
+  text-align: center;
+}
