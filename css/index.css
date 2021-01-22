@@ -18,60 +18,156 @@
   src: url(../assets/font/BigShouldersStencilDisplay-Regular.ttf);
 }
 
+/*
+#13293D
+#006494
+#247BA0
+#1B98E0
+#E8F1F2
+*/
+
 body{
-  display: grid;
-  grid-template-columns: auto 5fr;
-  grid-template-areas: 
-    "instrucciones  titulo"
-    "instrucciones  estado"
-    "instrucciones  tablero";
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+
+  background-color: #13293D;
 }
 
-#titulo{
-  background-color: orange;
+/* Panel lateral instrucciones */
+#container-instrucciones{
+  /*grid-area: instrucciones;*/
+  width: 20%;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 30px 20px 30px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
+  box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
+}
 
-  grid-area: titulo;
-  margin: auto;
-  margin-bottom: 25px;
+#container-instrucciones h2{
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0px 0px 20px 0px;
+}
 
+#container-instrucciones h3{
+  font-size: 16px;
+  font-weight: 600;
+  margin: 30px 0px 10px 0px;
+}
+
+#container-instrucciones li{
+  font-size: 14px;
+  margin-bottom: 7px;
+  margin-left: 10px;
+}
+
+/* Contenedor principal */
+#container{
+  /* grid-area: container; */
+  width: 70%;
+  height: 80%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
+  box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
+}
+
+#container-titulo{
+  
+}
+
+#container-titulo h1{
   font-family: 'Big Shoulders Black';
   font-size: 55px;
+  text-align: center;
+
+  margin-bottom: 25px;
 }
 
-#estado{
-  background-color: red;
+#container-estado{
 
-  grid-area: estado;
-
-  margin: auto;
-  margin-bottom: 10px;
-
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 25px;
-}
-
-#instrucciones{
-  background-color: aqua;
-  grid-area: instrucciones;
-}
-
-#tablero{
-  background-color: blueviolet;
-  grid-area: tablero;
-
-  display: grid;
-  justify-items: center;
 }
 
 .ocultar-botones{
   display: none;
 }
 
+#container-estado #estado{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  text-align: center;
+
+  margin-bottom: 15px;
+}
+
+/* Tablero */
+#container-tablero{
+  display: grid;
+  justify-items: center;
+}
+
+#conjunto-botones{
+  text-align: center;
+}
+
+#conjunto-botones p{
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 .celda{
   font-family: 'Big Shoulders Black';
   font-size: 25px;
-
+  border: 2px solid #000000;
   width: 35px;
   height: 35px;
   text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+.celda.agua, .celda.agua:hover{
+  background-color: #1B98E0;
+}
+
+.celda.tocado, .celda.tocado:hover{
+  background-color: #A31621;
+}
+
+.celda:hover{
+  cursor: pointer;
+  background-color: #E8F1F2;
+}
+
+/* Estilos comunes */
+.boton{
+  background-color: #E8F1F2;
+  border: 2px solid #13293D;
+  border-radius: 10px;
+  color: #13293D;
+  margin: 10px;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.35);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.35);
+}
+
+.boton:hover{
+  cursor: pointer;
+  background-color: #13293D;
+  color: #E8F1F2;
+  transition: .2s;
 }

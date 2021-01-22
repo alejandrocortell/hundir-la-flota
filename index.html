@@ -1,22 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hundir la flota</title>
+  <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/index.css">
 </head>
+
 <body>
-  <div id="titulo">Hundir la flota</div>
-  <div id="estado">Inicio del juego</div>
-  <div id='instrucciones'>Instrucciones</div>
-  <div id="tablero">
-    <div id="conjunto-botones">
-      <p>Elige el nivel de dificultad</p>
-      <button onclick="elegirDificultad(0)">Fácil</button>
-      <button onclick="elegirDificultad(1)">Medio</button>
-      <button onclick="elegirDificultad(2)">Difícil</button>
+  <div id="container">
+    <div id="container-titulo">
+      <h1>
+        Hundir la flota
+      </h1>
     </div>
+    <div id="container-estado">
+      <p id="estado">
+        Inicio del juego
+      </p>
+    </div>
+    <div id="container-tablero">
+      <div id="conjunto-botones">
+        <p>Elige el nivel de dificultad</p>
+        <div>
+          <button onclick="elegirDificultad(0)" class="boton">Fácil</button>
+          <button onclick="elegirDificultad(1)" class="boton">Medio</button>
+          <button onclick="elegirDificultad(2)" class="boton">Difícil</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id='container-instrucciones'>
+    <h2>Instrucciones de juego</h2>
+    <p>Trata de encontrar los barcos según tu nivel de dificultad</p>
+    <h3 class="titulo-nivel">Nivel fácil</h3>
+    <ul>
+      <li>5 Lanchas de 1 casilla</li>
+      <li>3 Buques de 3 casillas horizontales</li>
+      <li>1 Acorazado de 4 casillas horizontales</li>
+      <li>1 Portaaviones de 5 casillas verticales</li>
+    </ul>
+
+    <h3 class="titulo-nivel">Nivel medio</h3>
+    <ul>
+      <li>2 Lanchas de 1 casilla</li>
+      <li>1 Buques de 3 casillas horizontales</li>
+      <li>1 Acorazado de 4 casillas horizontales</li>
+      <li>1 Portaaviones de 5 casillas verticales</li>
+    </ul>
+
+    <h3 class="titulo-nivel">Nivel dificil</h3>
+    <ul>
+      <li>1 Lanchas de 1 casilla</li>
+      <li>1 Buques de 3 casillas horizontales</li>
+    </ul>
   </div>
 </body>
 <script src="/js/functions.js"></script>
@@ -24,4 +63,5 @@
 <script src="/js/niveles/medio.js"></script>
 <script src="/js/niveles/facil.js"></script>
 <script src="/js/index.js"></script>
+
 </html>

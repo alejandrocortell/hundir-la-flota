@@ -13,7 +13,7 @@ function crearTableroVacio() {
 // Crea en html una tabla del jugador a partir del array indicado
 function generaTabla(tableroJugador, tablero) {
   // Obtener la referencia del elemento body
-  let idTablero = document.getElementById('tablero')
+  let idTablero = document.getElementById('container-tablero')
 
   if (idTablero.getElementsByTagName('table')[0]) {
     idTablero.removeChild(idTablero.getElementsByTagName('table')[0])
@@ -54,8 +54,6 @@ function generaTabla(tableroJugador, tablero) {
   tabla.appendChild(tblBody)
   // appends <table> into <body>
   idTablero.appendChild(tabla)
-  // modifica el atributo 'border' de la tabla y lo fija a '2';
-  tabla.setAttribute('border', '2')
 }
 
 // Recibe las coordenadas con la casilla bombardeadas e indica si hay barco o no
@@ -72,10 +70,15 @@ function actualizaTableroJugador(tocado, x, y) {
   let tableroNuevoJugador = tableroJugador
   if (tocado) {
     tableroNuevoJugador[x][y] = 'X'
-    document.getElementById('*'+ x + '#' + y).innerHTML = "X";
+    document.getElementById('*' + x + '#' + y).innerHTML = "X";
+    document.getElementById('*' + x + '#' + y).classList.add('tocado')
+    document.getElementById('estado').innerHTML = "¡Tocado!";
+
   } else {
     tableroNuevoJugador[x][y] = 'A'
     document.getElementById('*' + x + '#' + y).innerHTML = "A";
+    document.getElementById('*' + x + '#' + y).classList.add('agua')
+    document.getElementById('estado').innerHTML = "¡Agua!";
   }
   tableroJugador = tableroNuevoJugador
 
