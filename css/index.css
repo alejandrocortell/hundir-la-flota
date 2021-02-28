@@ -26,65 +26,64 @@
 #E8F1F2
 */
 
-body{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 30px;
   display: flex;
+  gap: 12px;
   flex-direction: row-reverse;
   justify-content: space-evenly;
 
-  background-color: #13293D;
+  background-color: #13293d;
 }
 
 /* Panel lateral instrucciones */
-#container-instrucciones{
-  /*grid-area: instrucciones;*/
+#container-instrucciones {
   width: 20%;
+  min-width: 250px;
   height: 100%;
   background-color: #ffffff;
   padding: 30px 20px 30px 20px;
   border-radius: 10px;
-  -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
-  -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
-  box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.35);
 }
 
-#container-instrucciones h2{
+#container-instrucciones h2 {
   font-size: 24px;
   font-weight: 600;
   margin: 0px 0px 20px 0px;
 }
 
-#container-instrucciones h3{
+#container-instrucciones h3 {
   font-size: 16px;
   font-weight: 600;
   margin: 30px 0px 10px 0px;
 }
 
-#container-instrucciones li{
+#container-instrucciones li {
   font-size: 14px;
   margin-bottom: 7px;
   margin-left: 10px;
 }
 
 /* Contenedor principal */
-#container{
-  /* grid-area: container; */
+#container {
   width: 70%;
   height: 80%;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
-  -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
-  -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
-  box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.35);
 }
 
-#container-titulo{
-  
+#container-titulo {
 }
 
-#container-titulo h1{
+#container-titulo h1 {
   font-family: 'Big Shoulders Black';
   font-size: 55px;
   text-align: center;
@@ -92,16 +91,15 @@ body{
   margin-bottom: 25px;
 }
 
-#container-estado{
-
+#container-estado {
 }
 
-.ocultar-botones{
+.ocultar-botones {
   display: none;
 }
 
-#container-estado #estado{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#container-estado #estado {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 25px;
   text-align: center;
 
@@ -109,22 +107,22 @@ body{
 }
 
 /* Tablero */
-#container-tablero{
+#container-tablero {
   display: grid;
   justify-items: center;
 }
 
-#conjunto-botones{
+#conjunto-botones {
   text-align: center;
 }
 
-#conjunto-botones p{
+#conjunto-botones p {
   font-size: 35px;
   text-align: center;
   margin-bottom: 15px;
 }
 
-.celda{
+.celda {
   font-family: 'Big Shoulders Black';
   font-size: 25px;
   border: 2px solid #000000;
@@ -133,26 +131,29 @@ body{
   text-align: center;
   display: table-cell;
   vertical-align: middle;
-}
-.celda.agua, .celda.agua:hover{
-  background-color: #1B98E0;
-}
-
-.celda.tocado, .celda.tocado:hover{
-  background-color: #A31621;
-}
-
-.celda:hover{
   cursor: pointer;
-  background-color: #E8F1F2;
+}
+.celda.agua,
+.celda.agua:hover {
+  background-color: #1b98e0;
+}
+
+.celda.tocado,
+.celda.tocado:hover {
+  background-color: #a31621;
+}
+
+.celda:hover {
+  cursor: pointer;
+  background-color: #e8f1f2;
 }
 
 /* Estilos comunes */
-.boton{
-  background-color: #E8F1F2;
-  border: 2px solid #13293D;
+.boton {
+  background-color: #e8f1f2;
+  border: 2px solid #13293d;
   border-radius: 10px;
-  color: #13293D;
+  color: #13293d;
   margin: 10px;
   padding: 10px 24px;
   text-align: center;
@@ -160,14 +161,33 @@ body{
   display: inline-block;
   font-size: 16px;
 
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.35);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.35);
-  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.35);
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
-.boton:hover{
+.boton:hover {
   cursor: pointer;
-  background-color: #13293D;
-  color: #E8F1F2;
-  transition: .2s;
+  background-color: #13293d;
+  color: #e8f1f2;
+  transition: 0.2s;
+}
+
+@media only screen and (max-width: 850px) {
+  body {
+    flex-direction: column;
+  }
+
+  #container-instrucciones {
+    width: auto;
+  }
+
+  #container {
+    width: auto;
+  }
+
+  .celda {
+    width: calc(70vw / 10);
+    height: calc(70vw / 10);
+  }
 }
