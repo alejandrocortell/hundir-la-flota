@@ -70,15 +70,14 @@ function actualizaTableroJugador(tocado, x, y) {
   let tableroNuevoJugador = tableroJugador
   if (tocado) {
     tableroNuevoJugador[x][y] = 'X'
-    document.getElementById('*' + x + '#' + y).innerHTML = "X";
+    document.getElementById('*' + x + '#' + y).innerHTML = 'X'
     document.getElementById('*' + x + '#' + y).classList.add('tocado')
-    document.getElementById('estado').innerHTML = "¡Tocado!";
-
+    document.getElementById('estado').innerHTML = '¡Tocado!'
   } else {
     tableroNuevoJugador[x][y] = 'A'
-    document.getElementById('*' + x + '#' + y).innerHTML = "A";
+    document.getElementById('*' + x + '#' + y).innerHTML = 'A'
     document.getElementById('*' + x + '#' + y).classList.add('agua')
-    document.getElementById('estado').innerHTML = "¡Agua!";
+    document.getElementById('estado').innerHTML = '¡Agua!'
   }
   tableroJugador = tableroNuevoJugador
 
@@ -112,7 +111,7 @@ function cambiaVisualizacionBotones() {
 }
 // Muestra los cambios tras el fin del juego
 function finJuego() {
-  document.getElementById('estado').innerHTML = "Fin del juego";
+  document.getElementById('estado').innerHTML = 'Fin del juego'
   cambiaVisualizacionBotones()
 }
 
@@ -120,8 +119,8 @@ function finJuego() {
 function imprimeTablero(tablero) {
   let stringTablero = ''
 
-  tablero.forEach(fila => {
-    fila.forEach(posicion => {
+  tablero.forEach((fila) => {
+    fila.forEach((posicion) => {
       stringTablero += posicion + ' '
     })
     stringTablero += '\n'
@@ -132,5 +131,5 @@ function imprimeTablero(tablero) {
 
 // Devuelve un numero entero aleatorio entre min y max, ambos incluidos
 function numeroAleatorio(min, max) {
-  return Math.floor(min + (Math.random() * (max - min + 1)))
+  return Math.floor(min + Math.random() * (max - min + 1))
 }

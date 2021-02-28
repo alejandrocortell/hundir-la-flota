@@ -12,11 +12,7 @@ function elegirDificultad(nivel) {
   } else if (nivel === 2) {
     nivelDificil()
   }
-  document.getElementById('estado').innerHTML = 'Inicio del juego';
+  document.getElementById('estado').innerHTML = 'Inicio del juego'
   cambiaVisualizacionBotones()
   generaTabla(tableroJugador, tablero)
-
-  // Debug
-  console.log(imprimeTablero(tablero))
-  //console.log(imprimeTablero(tableroJugador))
 }
